@@ -9,18 +9,26 @@ function Portfolio() {
     {
       id: 1,
       src: wogapp,
+      hrefDemo: "https://wog-app.vercel.app/",
+      hrefCode: "https://github.com/juani029/PIVideoGames",
     },
     {
       id: 2,
       src: gymApp,
+      hrefDemo: "https://pgym-henry-final.vercel.app/",
+      hrefCode: "https://github.com/agskbr/PF-Gym-Control-App",
     },
     {
       id: 3,
       src: GalleryApp,
+      hrefDemo: "https://api-mern-stack.herokuapp.com/",
+      hrefCode: "https://github.com/juani029/PIVideoGames",
     },
     {
       id: 4,
       src: Freelancer,
+      hrefDemo: "https://website-freelancer-js.netlify.app/",
+      hrefCode: "https://github.com/juani029/sitio-web-freelancer",
     },
   ];
 
@@ -38,7 +46,7 @@ function Portfolio() {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src }) => (
+          {portfolios.map(({ id, src, hrefDemo, hrefCode }) => (
             <div id={id} className="shadow-md shadow-gray-600 rounded-lg">
               <img
                 src={src}
@@ -46,12 +54,22 @@ function Portfolio() {
                 className="rounded-md duration-200 hover:scale-105"
               />
               <div className="flex items-center justify-center">
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                <a
+                  href={hrefDemo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 border rounded-md cursor-pointer text-center hover:shadow-md hover:shadow-gray-600"
+                >
                   Demo
-                </button>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                </a>
+                <a
+                  href={hrefCode}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 border rounded-md cursor-pointer text-center hover:shadow-md hover:shadow-gray-600"
+                >
                   Code
-                </button>
+                </a>
               </div>
             </div>
           ))}
