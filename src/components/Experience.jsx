@@ -5,6 +5,7 @@ import javascript from "../assets/javascript.png";
 import node from "../assets/node.png";
 import react from "../assets/react.png";
 import tailwind from "../assets/tailwind.png";
+import { FormattedMessage } from "react-intl";
 
 function Experience() {
   const experiences = [
@@ -59,16 +60,24 @@ function Experience() {
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500 p-2">
-            Experience
+          <p className="text-4xl font-bold inline border-b-4 border-gray-500 p-2 capitalize">
+            <FormattedMessage
+              id="experience.title"
+              defaultMessage="experience"
+            />
           </p>
-          <p className="py-6">These are technologies i've worked with</p>
+          <p className="py-6">
+            <FormattedMessage
+              id="experience.description"
+              defaultMessage="These are technologies i've worked with"
+            />
+          </p>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
           {experiences.map(({ id, src, title, style }) => (
             <div
-              id={id}
+              key={id}
               className={
                 "shadow-md hover:scale-105 duration-500 py-2 rounded-lg" +
                 " " +

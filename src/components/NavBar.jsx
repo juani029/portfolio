@@ -1,30 +1,46 @@
 import { useState } from "react";
+import { useLangs } from "../context/langContext";
 import { FaBars, FaTimes } from "react-icons/fa";
+import flagEs from "../assets/icons/es.svg";
+import flagGb from "../assets/icons/gb.svg";
 import { Link } from "react-scroll";
+import { FormattedMessage } from "react-intl";
 
 function NavBar() {
   const [nav, setNav] = useState(false);
-
+  const [widthLang, setWidthLang] = useState("w-1/2");
+  const { setLanguage } = useLangs();
+  // console.log(setLanguage);
   const links = [
     {
-      id: 1,
+      key: 1,
       link: "home",
+      id: "nav.first-link",
+      defaultMessage: "home",
     },
     {
-      id: 2,
+      key: 2,
       link: "about",
+      id: "nav.second-link",
+      defaultMessage: "about",
     },
     {
-      id: 3,
+      key: 3,
       link: "portfolio",
+      id: "nav.third-link",
+      defaultMessage: "portfolio",
     },
     {
-      id: 4,
+      key: 4,
       link: "experience",
+      id: "nav.fourth-link",
+      defaultMessage: "experience",
     },
     {
-      id: 5,
+      key: 5,
       link: "contact",
+      id: "nav.fifth-link",
+      defaultMessage: "contact",
     },
   ];
 
@@ -34,14 +50,44 @@ function NavBar() {
         <h1 className="text-6xl font-signature ml-2 mt-1">Juani</h1>
       </div>
 
+      <div className="flex w-48 items-center justify-between">
+        <div className={widthLang}>
+          <p className="capitalize font-medium text-gray-500 justify-start">
+            <FormattedMessage id="nav.language" defaultMessage="lang" />
+          </p>
+        </div>
+        <div className="w-16">
+          <img
+            onClick={() => {
+              setLanguage("es-AR");
+              setWidthLang("w-1/3");
+            }}
+            className="cursor-pointer block w-10 ml-2"
+            src={flagEs}
+            alt=""
+          />
+        </div>
+        <div className="w-16">
+          <img
+            onClick={() => {
+              setLanguage("en-US");
+              setWidthLang("w-1/2");
+            }}
+            className="cursor-pointer block w-10"
+            src={flagGb}
+            alt=""
+          />
+        </div>
+      </div>
+
       <ul className="hidden md:flex">
-        {links.map(({ link, id }) => (
+        {links.map(({ link, id, key, defaultMessage }) => (
           <li
             className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
-            key={id}
+            key={key}
           >
             <Link to={link} smooth duration={500}>
-              {link}
+              <FormattedMessage id={id} defaultMessage={defaultMessage} />
             </Link>
           </li>
         ))}
@@ -58,10 +104,10 @@ function NavBar() {
 
       {nav && (
         <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
-          {links.map(({ link, id }) => (
+          {links.map(({ key, link, id, defaultMessage }) => (
             <li
               className="px-4 cursor-pointer capitalize py-6 text-4xl"
-              key={id}
+              key={key}
             >
               <Link
                 onClick={() => setNav(!nav)}
@@ -69,7 +115,7 @@ function NavBar() {
                 smooth
                 duration={500}
               >
-                {link}
+                <FormattedMessage id={id} defaultMessage={defaultMessage} />
               </Link>
             </li>
           ))}
