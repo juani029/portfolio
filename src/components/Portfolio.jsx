@@ -22,8 +22,8 @@ function Portfolio() {
     {
       id: 3,
       src: GalleryApp,
-      hrefDemo: "https://api-mern-stack.herokuapp.com/",
-      hrefCode: "https://github.com/juani029/PIVideoGames",
+      hrefDemo: "https://posts-mern-app.vercel.app/",
+      hrefCode: "https://github.com/juani029/MernAppCrud",
     },
     {
       id: 4,
