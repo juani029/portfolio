@@ -46,8 +46,8 @@ function NavBar() {
 
   return (
     <div className="flex justify-between items-center w-full h-20 text-white px-4 bg-black fixed">
-      <div>
-        <h1 className="text-6xl font-signature ml-2 mt-1">Juani</h1>
+      <div className="flex ml-2 md:ml-4 md:mt-2 mr-3 py-2 justify-center items-center">
+        <h1 className="text-4xl md:text-6xl font-signature">Juani</h1>
       </div>
 
       <div className="flex w-48 items-center justify-between">
