@@ -6,10 +6,10 @@
     "nav.fourth-link" : "Experiencia",
     "nav.fifth-link" : "Contacto",
     "profile.rol" :"Soy Full Stack Developer",
-    "profile.description" : "Tengo un año de experiencia en construccion de software. Actualmente estoy especializandome en desarrollar aplicaciones utilizando el stack MERN (MongoDb, Express Js, React Js y Node Js).",
+    "profile.description" : "Tengo un año de experiencia en desarrollo de software. Actualmente desarrollando proyectos con el stack MERN (MongoDb, Express, React y Node).",
     "about.title" : "Sobre mi",
-    "about.first-description" : "Tengo 22 años, soy de Argentina - Neuquén. Actualmente estoy trabajando en un proyecto grupal, mis objetivos son adquirir nuevas experiencias, sumar conocimientos y poder conseguir mi tan deseado, primer empleo como Desarrollador.",
-    "about.last-description" : "Me considero una persona proactiva, con aprendizaje continuo, que le encanta el trabajo en equipo. Me apasiona la tecnología  y los videojuegos desde pequeño, en mis tiempos libres leo libros, practico deportes y disfruto de mi familia.",
+    "about.first-description" : "Tengo 22 años, soy de Argentina - Neuquén. Mi principal objetivo es adquirir nuevas experiencias, sumar conocimientos y tener una oportunidad laboral en la cual poder aportar desde mi lugar.",
+    "about.last-description" : "Me considero una persona resolutiva, me encuentro en continuo aprendizaje y se me facilita el trabajo en equipo, comprometido en el desarrollo de los proyectos en los que participo. Me apasiona la tecnología, el mundo digital y los videojuegos desde pequeño, en mis tiempos libres leo libros, hago ejercicio y disfruto de mi familia.",
     "portfolio.description":"Mira algunos de mis trabajos aquí",
     "portfolio.first-button":"Deploy",
     "portfolio.last-button":"Codigo",
@@ -18,7 +18,7 @@
     "contact.title" :"Contacto",
     "contact.description" :"Envíe el formulario a continuación para contactarse conmigo",
     "contact.first-input" :"Introduce tu nombre",
-    "contact.second-input" :"Contact",
+    "contact.second-input" :"Contacto",
     "contact.last-input" :"Escribe tu mensaje",
     "contact.button" :"Hablemos"
 }

@@ -5,6 +5,10 @@ import javascript from "../assets/javascript.png";
 import node from "../assets/node.png";
 import react from "../assets/react.png";
 import tailwind from "../assets/tailwind.png";
+import mongodb from "../assets/mongodb.png";
+import typescript from "../assets/typescript.png";
+import postgresql from "../assets/postgresql.png";
+
 import { FormattedMessage } from "react-intl";
 
 function Experience() {
@@ -50,6 +54,24 @@ function Experience() {
       src: tailwind,
       title: "tailwind",
       style: "shadow-sky-400",
+    },
+    {
+      id: 8,
+      src: typescript,
+      title: "typescript",
+      style: "shadow-blue-500",
+    },
+    {
+      id: 9,
+      src: mongodb,
+      title: "mongodb",
+      style: "shadow-green-500",
+    },
+    {
+      id: 10,
+      src: postgresql,
+      title: "postgresql",
+      style: "shadow-cyan-500",
     },
   ];
 

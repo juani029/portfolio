@@ -1,15 +1,15 @@
-import React from "react";
-import wogapp from "../assets/portfolio/wogapp.png";
+import wogApp from "../assets/portfolio/wogapp.png";
 import gymApp from "../assets/portfolio/gymApp.png";
-import GalleryApp from "../assets/portfolio/GalleryApp.png";
-import Freelancer from "../assets/portfolio/Freelancer.png";
+import galleryApp from "../assets/portfolio/GalleryApp.png";
+import freelancerApp from "../assets/portfolio/Freelancer.png";
+import fameApp from "../assets/portfolio/fameapp.png";
 import { FormattedMessage } from "react-intl";
 
 function Portfolio() {
   const portfolios = [
     {
       id: 1,
-      src: wogapp,
+      src: wogApp,
       hrefDemo: "https://wog-app.vercel.app/",
       hrefCode: "https://github.com/juani029/PIVideoGames",
     },
@@ -21,15 +21,21 @@ function Portfolio() {
     },
     {
       id: 3,
-      src: GalleryApp,
+      src: galleryApp,
       hrefDemo: "https://posts-mern-app.vercel.app/",
       hrefCode: "https://github.com/juani029/MernAppCrud",
     },
     {
       id: 4,
-      src: Freelancer,
+      src: freelancerApp,
       hrefDemo: "https://website-freelancer-js.netlify.app/",
       hrefCode: "https://github.com/juani029/sitio-web-freelancer",
+    },
+    {
+      id: 5,
+      src: fameApp,
+      hrefDemo: "https://fame-app.vercel.app/",
+      hrefCode: "https://github.com/No-Country/c8-57-m-mern",
     },
   ];
 
@@ -57,7 +63,7 @@ function Portfolio() {
               <img
                 src={src}
                 alt=""
-                className="rounded-md duration-200 hover:scale-105"
+                className="rounded-md duration-200 hover:scale-105 h-[70%] md:h-[60%] w-full"
               />
               <div className="flex items-center justify-center">
                 <a
